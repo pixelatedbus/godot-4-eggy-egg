@@ -1,0 +1,291 @@
+[gd_scene load_steps=20 format=3 uid="uid://byf24pkf0ia00"]
+
+[ext_resource type="Script" path="res://scenes/menus/shop.gd" id="1_ochc1"]
+[ext_resource type="Theme" uid="uid://ynu2fkmqcuhw" path="res://font_default.tres" id="2_52uf1"]
+[ext_resource type="FontFile" uid="uid://wmtd655ld5o1" path="res://asset/Sprout Lands - Sprites - Basic pack/8bitoperator_jve.ttf" id="3_yl4pt"]
+[ext_resource type="Texture2D" uid="uid://cw5i1g6uisnar" path="res://asset/asset jadi/farmingTilesheetComplete.png" id="4_0ub05"]
+[ext_resource type="Texture2D" uid="uid://dunexe3fbli6t" path="res://asset/egg 7.png" id="4_ckf3j"]
+[ext_resource type="Texture2D" uid="uid://bkg8b0erb1hk4" path="res://asset/asset jadi/animasi coin/coin1.png" id="5_gs0c3"]
+[ext_resource type="Texture2D" uid="uid://bxxqn0vxl13a2" path="res://asset/asset jadi/animasi coin/coin2.png" id="6_2vqeo"]
+[ext_resource type="Texture2D" uid="uid://oah1g8rbq0r3" path="res://asset/Turtle_Egg_29_JE2_BE2.png" id="6_wc1y6"]
+[ext_resource type="Texture2D" uid="uid://c1fi0p8lla6k0" path="res://asset/asset jadi/animasi coin/coin3.png" id="7_7a0je"]
+[ext_resource type="Texture2D" uid="uid://e4cnw4600lvm" path="res://asset/asset jadi/animasi coin/coin4.png" id="8_xxnfp"]
+[ext_resource type="Script" path="res://scenes/menus/coin_label.gd" id="9_jcgux"]
+[ext_resource type="Texture2D" uid="uid://kit1bijhi7b6" path="res://asset/asset jadi/animasi coin/coin5.png" id="9_owxwe"]
+[ext_resource type="Texture2D" uid="uid://dtx8lxjdv8oue" path="res://asset/asset jadi/animasi coin/coin6.png" id="10_gm6eb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulnxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gs0c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2vqeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7a0je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xxnfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_owxwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gm6eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gm6eb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lox1d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eriuc"]
+atlas = ExtResource("4_0ub05")
+region = Rect2(178, 84, 11, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqaxl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eriuc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2rny"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ckf3j")
+}],
+"loop": true,
+"name": &"eggno1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wc1y6")
+}],
+"loop": true,
+"name": &"eggno2",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mgy4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gs0c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2vqeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7a0je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xxnfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_owxwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gm6eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gm6eb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_ochc1")
+metadata/_edit_vertical_guides_ = [560.0, 592.0, 1328.0, 1360.0, 960.0, 1920.0]
+metadata/_edit_horizontal_guides_ = [1080.0]
+
+[node name="lay" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1081.0
+color = Color(0.847059, 0.839216, 0.760784, 1)
+
+[node name="bg_coin2" type="ColorRect" parent="lay"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 48.0
+offset_right = 344.0
+offset_bottom = 161.0
+color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="coin" type="AnimatedSprite2D" parent="lay/bg_coin2"]
+position = Vector2(324, 338)
+sprite_frames = SubResource("SpriteFrames_ulnxs")
+
+[node name="coin_label" type="Label" parent="lay/bg_coin2"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = -10.0
+offset_right = 276.0
+offset_bottom = 114.0
+theme_override_fonts/font = ExtResource("3_yl4pt")
+theme_override_font_sizes/font_size = 80
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9_jcgux")
+
+[node name="purchase_but" type="Button" parent="lay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -209.0
+offset_right = 217.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_52uf1")
+text = "Purchase"
+
+[node name="use_but" type="Button" parent="lay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -209.0
+offset_right = 217.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_52uf1")
+theme_override_colors/icon_normal_color = Color(0.509804, 0.266667, 0.298039, 1)
+text = "Used"
+
+[node name="eggname" type="Label" parent="lay"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 656.0
+offset_top = 96.0
+offset_right = 1272.0
+offset_bottom = 210.0
+theme = ExtResource("2_52uf1")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yl4pt")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxTexture_lox1d")
+text = "EGG
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="left_but" type="Button" parent="lay"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 426.0
+offset_top = -92.5
+offset_right = -1361.0
+offset_bottom = 69.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="lay/left_but"]
+position = Vector2(64, 80)
+rotation = 1.5708
+scale = Vector2(13.5909, 13.5909)
+sprite_frames = SubResource("SpriteFrames_kqaxl")
+
+[node name="right_but" type="Button" parent="lay"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1360.0
+offset_top = -92.5
+offset_right = -426.0
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="lay/right_but"]
+position = Vector2(64, 80)
+rotation = 4.71239
+scale = Vector2(13.5909, 13.5909)
+sprite_frames = SubResource("SpriteFrames_kqaxl")
+
+[node name="exit_but" type="Button" parent="lay"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1752.0
+offset_top = -508.5
+offset_right = -32.0
+offset_bottom = -388.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg_egg" type="ColorRect" parent="lay"]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 240.0
+offset_right = 1328.0
+offset_bottom = 840.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="eggicon" type="AnimatedSprite2D" parent="lay"]
+position = Vector2(968, 528)
+scale = Vector2(1.6205, 1.54859)
+sprite_frames = SubResource("SpriteFrames_g2rny")
+animation = &"eggno1"
+
+[node name="bg_coin" type="ColorRect" parent="lay"]
+layout_mode = 0
+offset_left = 1264.0
+offset_top = 760.0
+offset_right = 1464.0
+offset_bottom = 888.0
+color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="coin" type="AnimatedSprite2D" parent="lay/bg_coin"]
+position = Vector2(432, 349)
+sprite_frames = SubResource("SpriteFrames_mgy4m")
+frame_progress = 0.2508
+metadata/_edit_lock_ = true
+
+[node name="coin_label" type="Label" parent="lay/bg_coin"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("3_yl4pt")
+theme_override_font_sizes/font_size = 70
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="lay/purchase_but" to="." method="_on_purchase_but_pressed"]
+[connection signal="pressed" from="lay/use_but" to="." method="_on_use_but_pressed"]
+[connection signal="pressed" from="lay/left_but" to="." method="_on_left_but_pressed"]
+[connection signal="pressed" from="lay/right_but" to="." method="_on_right_but_pressed"]
+[connection signal="pressed" from="lay/exit_but" to="." method="_on_exit_but_pressed"]

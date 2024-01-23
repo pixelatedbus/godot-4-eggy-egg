@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhx2nmhtugtgv"
+path="res://.godot/imported/Something jingle for something.ogg-076b5884c45d87e1c0924be8a7b043a5.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/EDITED-20240117T062029Z-001/EDITED/Something jingle for something.ogg"
+dest_files=["res://.godot/imported/Something jingle for something.ogg-076b5884c45d87e1c0924be8a7b043a5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

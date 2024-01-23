@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://dhcgseb3r60c8"]
+
+[ext_resource type="Script" path="res://scenes/screen/scores_and_stuff.gd" id="1_hiwes"]
+[ext_resource type="FontFile" uid="uid://wmtd655ld5o1" path="res://asset/8bitoperator_jve.ttf" id="2_6sdsd"]
+[ext_resource type="Texture2D" uid="uid://ccd03gbd2g6vh" path="res://asset/new folder2/coin1.png" id="3_n0ono"]
+[ext_resource type="Texture2D" uid="uid://dqoc6er0h4han" path="res://asset/new folder2/coin2.png" id="4_lvy2m"]
+[ext_resource type="Texture2D" uid="uid://b7sjc6dmr0cn0" path="res://asset/new folder2/coin3.png" id="5_6j77a"]
+[ext_resource type="Texture2D" uid="uid://b1n2pyr5g84g5" path="res://asset/new folder2/coin4.png" id="6_jkjln"]
+[ext_resource type="Texture2D" uid="uid://d4eh27qpslph0" path="res://asset/new folder2/coin5.png" id="7_c8w4t"]
+[ext_resource type="Texture2D" uid="uid://cbl3uuisuk040" path="res://asset/new folder2/coin6.png" id="8_br3pi"]
+[ext_resource type="Texture2D" uid="uid://rprjga7wxl7e" path="res://asset/new folder2/animasi bintang 9.png" id="17_slnvf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8if6a"]
+font = ExtResource("2_6sdsd")
+font_size = 60
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jk0me"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_n0ono")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lvy2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6j77a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jkjln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c8w4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_br3pi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1mqyk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_slnvf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="scores and stuff" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hiwes")
+
+[node name="menu" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="menu"]
+offset_right = 229.0
+offset_bottom = 222.0
+
+[node name="points" type="Label" parent="menu"]
+texture_filter = 1
+offset_left = 124.0
+offset_top = 1.0
+offset_right = 317.0
+offset_bottom = 79.0
+text = "yipeeee"
+label_settings = SubResource("LabelSettings_8if6a")
+
+[node name="coin" type="Label" parent="menu"]
+texture_filter = 1
+offset_left = 128.0
+offset_top = 120.0
+offset_right = 316.0
+offset_bottom = 200.0
+text = "yipeeee"
+label_settings = SubResource("LabelSettings_8if6a")
+
+[node name="koin" type="AnimatedSprite2D" parent="menu"]
+texture_filter = 1
+position = Vector2(321, 447)
+sprite_frames = SubResource("SpriteFrames_jk0me")
+autoplay = "default"
+frame_progress = 0.350398
+
+[node name="poin" type="AnimatedSprite2D" parent="menu"]
+texture_filter = 1
+position = Vector2(442, 123)
+scale = Vector2(0.536517, 0.46177)
+sprite_frames = SubResource("SpriteFrames_1mqyk")
+autoplay = "default"
+frame_progress = 0.233884

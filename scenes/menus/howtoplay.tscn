@@ -1,0 +1,210 @@
+[gd_scene load_steps=16 format=3 uid="uid://cl4g6816ebwkk"]
+
+[ext_resource type="Script" path="res://scenes/menus/howtoplay.gd" id="1_sdv4a"]
+[ext_resource type="Texture2D" uid="uid://hse8pyaxl3r6" path="res://asset/asset jadi/farmingTilesheetComplete.png" id="2_dbgal"]
+[ext_resource type="Theme" uid="uid://c5kq4bbhcet0n" path="res://font_text.tres" id="3_t3d0f"]
+[ext_resource type="Texture2D" uid="uid://dunexe3fbli6t" path="res://asset/egg 7.png" id="4_lwduw"]
+[ext_resource type="Texture2D" uid="uid://iapx0do87kq2" path="res://asset/asset jadi/pause screen/main menu/2.1.png" id="5_7pxk1"]
+[ext_resource type="Texture2D" uid="uid://oah1g8rbq0r3" path="res://asset/Turtle_Egg_29_JE2_BE2.png" id="5_owfpk"]
+[ext_resource type="Script" path="res://scenes/menus/mumsic.gd" id="6_80n2b"]
+[ext_resource type="AudioStream" uid="uid://bvryq4nqxdtth" path="res://asset/EDITED-20240117T062029Z-001/EDITED/Menu loop.ogg" id="6_qq4u1"]
+[ext_resource type="Texture2D" uid="uid://gnqt0377s2km" path="res://asset/asset jadi/pause screen/main menu/eggame (DEBUG) 18_01_2024 23_40_49.png" id="7_2ii70"]
+[ext_resource type="Texture2D" uid="uid://dh1sr05sefiej" path="res://asset/asset jadi/new folder/magnet item (1).png" id="8_g5v6t"]
+[ext_resource type="Texture2D" uid="uid://bi2yulm1h23i3" path="res://asset/asset jadi/burung frame 1.png" id="9_um7wt"]
+[ext_resource type="Texture2D" uid="uid://dktqpycutd5ut" path="res://asset/png-transparent-pixel-art-mario-coin-text-rectangle-владыка-removebg-preview.png" id="10_kn5ty"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eriuc"]
+atlas = ExtResource("2_dbgal")
+region = Rect2(178, 84, 11, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a1cng"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eriuc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgveq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lwduw")
+}],
+"loop": true,
+"name": &"scene1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7pxk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_owfpk")
+}],
+"loop": true,
+"name": &"scene2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2ii70")
+}],
+"loop": true,
+"name": &"scene3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2ii70")
+}],
+"loop": true,
+"name": &"scene4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_g5v6t")
+}],
+"loop": true,
+"name": &"scene5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_g5v6t")
+}],
+"loop": true,
+"name": &"scene6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_um7wt")
+}],
+"loop": true,
+"name": &"scene7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_kn5ty")
+}],
+"loop": true,
+"name": &"scene8",
+"speed": 5.0
+}]
+
+[node name="howtoplay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sdv4a")
+metadata/_edit_horizontal_guides_ = [520.0]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1082.0
+
+[node name="left_but" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 264.0
+offset_top = -85.0
+offset_right = -1478.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-226, -178)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/left_but"]
+position = Vector2(83, 64)
+rotation = 1.5708
+scale = Vector2(13.5909, 13.5909)
+sprite_frames = SubResource("SpriteFrames_a1cng")
+
+[node name="right_but" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1504.0
+offset_top = -85.0
+offset_right = -239.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Panel/right_but"]
+position = Vector2(88, 64)
+rotation = 4.71239
+scale = Vector2(13.5909, 13.5909)
+sprite_frames = SubResource("SpriteFrames_a1cng")
+
+[node name="htptext" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.843
+anchor_right = 0.5
+anchor_bottom = 0.843
+offset_left = 418.0
+offset_top = 788.28
+offset_right = 1460.0
+offset_bottom = 977.28
+theme = ExtResource("3_t3d0f")
+theme_override_font_sizes/font_size = 40
+text = "hai ini coba coba aja pake bahasa indonesia. soalnya pake lorem ipsum dolor sit amet aneh banget gatau kenapa. kalimatnya kurang panjang hmmm, kok hurufnya kepotong kaya gitu ya, bingung. tinggal "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 448.0
+offset_top = 200.0
+offset_right = 1400.0
+offset_bottom = 816.0
+grow_horizontal = 0
+
+[node name="htplay" type="AnimatedSprite2D" parent="Panel2"]
+position = Vector2(476, 311)
+scale = Vector2(0.465852, 0.465852)
+sprite_frames = SubResource("SpriteFrames_fgveq")
+animation = &"scene8"
+
+[node name="exit_but" type="Button" parent="Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 3.0
+anchor_bottom = 3.6
+offset_left = 1264.0
+offset_top = -452.0
+offset_right = -1460.0
+offset_bottom = -2241.6
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_t3d0f")
+text = "exit"
+
+[node name="mumsic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qq4u1")
+script = ExtResource("6_80n2b")
+
+[connection signal="pressed" from="Panel/left_but" to="." method="_on_left_but_pressed"]
+[connection signal="pressed" from="Panel/right_but" to="." method="_on_right_but_pressed"]
+[connection signal="pressed" from="Panel2/exit_but" to="." method="_on_exit_but_pressed"]
+[connection signal="finished" from="mumsic" to="mumsic" method="_on_finished"]

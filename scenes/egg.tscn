@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://bskavv4w41rw5"]
+
+[ext_resource type="Script" path="res://scenes/egg.gd" id="1_jb75a"]
+[ext_resource type="Texture2D" uid="uid://dunexe3fbli6t" path="res://asset/egg 7.png" id="2_6v86n"]
+[ext_resource type="Script" path="res://scenes/koin.gd" id="3_01o4n"]
+[ext_resource type="Texture2D" uid="uid://bvqf0hbthruef" path="res://asset/new folder2/magnet power up.png" id="3_qxmsg"]
+[ext_resource type="Script" path="res://scenes/Pngtree-circle-clipart-blue-circle-png-image2381949-removebg-preview.gd" id="4_seb56"]
+[ext_resource type="Script" path="res://scenes/skin0.gd" id="6_ghe1a"]
+[ext_resource type="Texture2D" uid="uid://cqjly3oe024xi" path="res://asset/new folder2/skin.png" id="6_k12qs"]
+[ext_resource type="Script" path="res://scenes/skin1.gd" id="8_12kny"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v4moq"]
+radius = 18.2483
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y5qsm"]
+radius = 60.208
+
+[node name="egg" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_jb75a")
+
+[node name="koin" type="Area2D" parent="."]
+script = ExtResource("3_01o4n")
+
+[node name="Pngtree-circle-clipart-blue-circle-png-image2381949-removebg-preview" type="Sprite2D" parent="koin"]
+modulate = Color(2, 2, 2, 0.486)
+texture_filter = 1
+scale = Vector2(0.545556, 0.545556)
+texture = ExtResource("3_qxmsg")
+script = ExtResource("4_seb56")
+
+[node name="money_making" type="CollisionShape2D" parent="koin"]
+shape = SubResource("CircleShape2D_v4moq")
+debug_color = Color(0.619608, 0.458824, 0.721569, 0.419608)
+
+[node name="skin0" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-3, 9)
+scale = Vector2(0.493589, 0.481228)
+texture = ExtResource("2_6v86n")
+script = ExtResource("6_ghe1a")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, 0.5)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_y5qsm")
+
+[node name="skin1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, 5)
+scale = Vector2(1.01, 1.02252)
+texture = ExtResource("6_k12qs")
+script = ExtResource("8_12kny")

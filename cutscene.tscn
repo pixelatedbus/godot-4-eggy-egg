@@ -1,0 +1,282 @@
+[gd_scene load_steps=29 format=3 uid="uid://dtakov31em4r8"]
+
+[ext_resource type="Texture2D" uid="uid://dunexe3fbli6t" path="res://asset/egg 7.png" id="1_1x3kw"]
+[ext_resource type="Script" path="res://cutscene.gd" id="1_jfxe1"]
+[ext_resource type="Texture2D" uid="uid://tm4v5vom50c4" path="res://asset/asset jadi/new folder!!/frame 1.png" id="2_vcq8y"]
+[ext_resource type="Theme" uid="uid://c5kq4bbhcet0n" path="res://font_text.tres" id="3_lp3wp"]
+[ext_resource type="Texture2D" uid="uid://b47v3hdvcf2yt" path="res://asset/asset jadi/new folder!!/frame 10.png" id="4_i4lou"]
+[ext_resource type="Texture2D" uid="uid://d1oxuwwcgm5wt" path="res://asset/asset jadi/new folder!!/frame 11.png" id="5_krocx"]
+[ext_resource type="Script" path="res://narration.gd" id="5_ximwd"]
+[ext_resource type="Texture2D" uid="uid://bldfk4lqp13xy" path="res://asset/asset jadi/new folder!!/frame 12.png" id="6_wk8pd"]
+[ext_resource type="AudioStream" uid="uid://b8vsrj4l1xe4b" path="res://asset/EDITED-20240117T062029Z-001/EDITED/hope for an egg unloopable.ogg" id="6_xe344"]
+[ext_resource type="Texture2D" uid="uid://bbpkkht2e6gh6" path="res://asset/asset jadi/new folder!!/frame 13.png" id="7_atpll"]
+[ext_resource type="Texture2D" uid="uid://cukwyfacc1m3h" path="res://asset/asset jadi/new folder!!/frame 14.png" id="8_lurlp"]
+[ext_resource type="Texture2D" uid="uid://mce150oyniol" path="res://asset/asset jadi/new folder!!/frame 15.png" id="9_3xycb"]
+[ext_resource type="Texture2D" uid="uid://bokx2x6lemprb" path="res://asset/asset jadi/new folder!!/frame 16.png" id="10_hi7ln"]
+[ext_resource type="Texture2D" uid="uid://drwf403wf3oll" path="res://asset/asset jadi/new folder!!/frame 17.png" id="11_xwvua"]
+[ext_resource type="Texture2D" uid="uid://c6n2fmtuf5kkw" path="res://asset/asset jadi/new folder!!/frame 18.png" id="12_73h8x"]
+[ext_resource type="Texture2D" uid="uid://be1m8hmyq7la1" path="res://asset/asset jadi/new folder!!/frame 19.png" id="13_bocu2"]
+[ext_resource type="Texture2D" uid="uid://bmqh6ual8o5kx" path="res://asset/asset jadi/new folder!!/frame 2.png" id="14_5xl42"]
+[ext_resource type="Texture2D" uid="uid://bwc8cui6hvqjo" path="res://asset/asset jadi/new folder!!/frame 3.png" id="15_sslx7"]
+[ext_resource type="Texture2D" uid="uid://crlgwdky8ypqy" path="res://asset/asset jadi/new folder!!/frame 4.png" id="16_v6tbo"]
+[ext_resource type="Texture2D" uid="uid://cfl8tpex8nydo" path="res://asset/asset jadi/new folder!!/frame 5.png" id="17_a4hxp"]
+[ext_resource type="Texture2D" uid="uid://c4ofijriqbc42" path="res://asset/asset jadi/new folder!!/frame 6.png" id="18_1xaxs"]
+[ext_resource type="Texture2D" uid="uid://b5sviopjndrjg" path="res://asset/asset jadi/new folder!!/frame 7.png" id="19_sp8yc"]
+[ext_resource type="Texture2D" uid="uid://dwx6jawlhmlks" path="res://asset/asset jadi/new folder!!/frame 8.png" id="20_inigh"]
+[ext_resource type="Texture2D" uid="uid://bqmrha7sohng7" path="res://asset/asset jadi/new folder!!/frame 9.png" id="21_qtuho"]
+[ext_resource type="Script" path="res://ParallaxBackground.gd" id="24_eopla"]
+[ext_resource type="Texture2D" uid="uid://b2xeepbeojud7" path="res://asset/bg mentah.png" id="24_ixhd6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02wln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vcq8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_1x3kw")
+}],
+"loop": true,
+"name": &"story1",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_i4lou")
+}],
+"loop": true,
+"name": &"story10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_krocx")
+}],
+"loop": true,
+"name": &"story11",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wk8pd")
+}],
+"loop": true,
+"name": &"story12",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_atpll")
+}],
+"loop": true,
+"name": &"story13",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_lurlp")
+}],
+"loop": true,
+"name": &"story14",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_3xycb")
+}],
+"loop": true,
+"name": &"story15",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_hi7ln")
+}],
+"loop": true,
+"name": &"story16",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_xwvua")
+}],
+"loop": true,
+"name": &"story17",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_73h8x")
+}],
+"loop": true,
+"name": &"story18",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_bocu2")
+}],
+"loop": true,
+"name": &"story19",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_5xl42")
+}],
+"loop": true,
+"name": &"story2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_sslx7")
+}],
+"loop": true,
+"name": &"story3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_v6tbo")
+}],
+"loop": true,
+"name": &"story4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_a4hxp")
+}],
+"loop": true,
+"name": &"story5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_1xaxs")
+}],
+"loop": true,
+"name": &"story6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_sp8yc")
+}],
+"loop": true,
+"name": &"story7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_inigh")
+}],
+"loop": true,
+"name": &"story8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_qtuho")
+}],
+"loop": true,
+"name": &"story9",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wl28m"]
+font_size = 25
+
+[node name="cutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_jfxe1")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1088.0
+
+[node name="bg_scenes" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.449
+anchor_right = 0.5
+anchor_bottom = 0.449
+offset_left = -616.0
+offset_top = -368.512
+offset_right = 624.0
+offset_bottom = 207.488
+
+[node name="storyscenes" type="AnimatedSprite2D" parent="Panel/bg_scenes"]
+position = Vector2(620.329, 260.062)
+scale = Vector2(0.646123, 0.646123)
+sprite_frames = SubResource("SpriteFrames_02wln")
+animation = &"story9"
+
+[node name="bg_text" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.449
+anchor_right = 0.5
+anchor_bottom = 0.449
+offset_left = -616.0
+offset_top = 247.488
+offset_right = 624.0
+offset_bottom = 503.488
+color = Color(1, 1, 1, 0)
+
+[node name="con_button" type="Button" parent="Panel/bg_text"]
+modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 0
+offset_right = 1240.0
+offset_bottom = 256.0
+
+[node name="narration" type="Label" parent="Panel/bg_text"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 1240.0
+offset_bottom = 200.0
+theme = ExtResource("3_lp3wp")
+theme_override_font_sizes/font_size = 40
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate "
+horizontal_alignment = 1
+autowrap_mode = 2
+justification_flags = 161
+script = ExtResource("5_ximwd")
+
+[node name="continue" type="Label" parent="Panel/bg_text"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 200.0
+offset_right = 1235.0
+offset_bottom = 251.0
+theme = ExtResource("3_lp3wp")
+theme_override_font_sizes/font_size = 50
+text = "Click here to continue"
+label_settings = SubResource("LabelSettings_wl28m")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Panel"]
+script = ExtResource("24_eopla")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Panel/ParallaxBackground"]
+motion_scale = Vector2(200, 200)
+motion_mirroring = Vector2(0, 2150)
+
+[node name="TextureRect" type="Sprite2D" parent="Panel/ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+position = Vector2(960, 902)
+texture = ExtResource("24_ixhd6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xe344")
+autoplay = true
+
+[connection signal="pressed" from="Panel/bg_text/con_button" to="." method="_on_con_button_pressed"]

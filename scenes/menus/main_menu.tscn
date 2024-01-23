@@ -1,0 +1,273 @@
+[gd_scene load_steps=29 format=3 uid="uid://bb4y1g54d423g"]
+
+[ext_resource type="Script" path="res://scenes/menus/main_menu.gd" id="1_637xv"]
+[ext_resource type="Theme" uid="uid://ct2xfn4n434l3" path="res://font_default.tres" id="2_biuue"]
+[ext_resource type="Texture2D" uid="uid://bkg8b0erb1hk4" path="res://asset/asset jadi/animasi coin/coin1.png" id="2_qmhev"]
+[ext_resource type="Texture2D" uid="uid://bxxqn0vxl13a2" path="res://asset/asset jadi/animasi coin/coin2.png" id="3_xanle"]
+[ext_resource type="Texture2D" uid="uid://c1fi0p8lla6k0" path="res://asset/asset jadi/animasi coin/coin3.png" id="4_s2kct"]
+[ext_resource type="Texture2D" uid="uid://e4cnw4600lvm" path="res://asset/asset jadi/animasi coin/coin4.png" id="5_ro20k"]
+[ext_resource type="Texture2D" uid="uid://kit1bijhi7b6" path="res://asset/asset jadi/animasi coin/coin5.png" id="6_kpijj"]
+[ext_resource type="Texture2D" uid="uid://dtx8lxjdv8oue" path="res://asset/asset jadi/animasi coin/coin6.png" id="7_xg0xk"]
+[ext_resource type="FontFile" uid="uid://wmtd655ld5o1" path="res://asset/8bitoperator_jve.ttf" id="8_yldky"]
+[ext_resource type="Script" path="res://scenes/menus/coin_label.gd" id="9_y73r1"]
+[ext_resource type="Script" path="res://scenes/menus/latest_score.gd" id="10_1u4o0"]
+[ext_resource type="Texture2D" uid="uid://f4uk0mwqrmgu" path="res://asset/asset jadi/new folder!!/tanah ketapel menu.png" id="10_2rvaq"]
+[ext_resource type="Texture2D" uid="uid://thy76q42hvf7" path="res://asset/asset jadi/new folder!!/EGGY EGG.png" id="10_y7oay"]
+[ext_resource type="Script" path="res://scenes/menus/highest score.gd" id="11_6tiv2"]
+[ext_resource type="Texture2D" uid="uid://c8kkgghl5sxsk" path="res://asset/asset jadi/new folder!!/menu screen (back).png" id="11_j7a8s"]
+[ext_resource type="Texture2D" uid="uid://ch1st58ghkja1" path="res://asset/asset jadi/new folder!!/BANNER.png" id="11_xgc51"]
+[ext_resource type="Texture2D" uid="uid://dy851pfa6db1a" path="res://asset/asset jadi/new folder!!/menu screen (writing).png" id="12_vbib6"]
+[ext_resource type="AudioStream" uid="uid://bvryq4nqxdtth" path="res://asset/EDITED-20240117T062029Z-001/EDITED/Menu loop.ogg" id="13_g7ra3"]
+[ext_resource type="Texture2D" uid="uid://bpjd047us7r1y" path="res://asset/asset jadi/new folder!!/bg homescreen scroll horizontal.png" id="13_jcsdb"]
+[ext_resource type="Script" path="res://scenes/menus/sky bg.gd" id="13_jdqk8"]
+[ext_resource type="Script" path="res://scenes/menus/mumsic.gd" id="14_aqi6y"]
+[ext_resource type="Script" path="res://scenes/menus/sky bg2.gd" id="16_a1cfc"]
+[ext_resource type="Texture2D" uid="uid://45oth1ucpogy" path="res://asset/asset jadi/new folder!!/awan (banyak).png" id="17_oyxuh"]
+[ext_resource type="Script" path="res://scenes/menus/sky bg3.gd" id="18_hc0wx"]
+[ext_resource type="Texture2D" uid="uid://dugj2ypuxa0iy" path="res://asset/new folder2/images-removebg-preview.png" id="22_e4r7w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vnqs2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qmhev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xanle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s2kct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ro20k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kpijj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xg0xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xg0xk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ie7in"]
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_d1ml0"]
+font_size = 60
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_637xv")
+
+[node name="BG" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1919.0
+offset_bottom = 1083.0
+
+[node name="bg_coin" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 48.0
+offset_right = 344.0
+offset_bottom = 161.0
+color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="coin" type="AnimatedSprite2D" parent="BG/bg_coin"]
+position = Vector2(324, 338)
+sprite_frames = SubResource("SpriteFrames_vnqs2")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="coin_remaining" type="Label" parent="BG/bg_coin"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = -12.0
+offset_right = 276.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("8_yldky")
+theme_override_font_sizes/font_size = 80
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9_y73r1")
+
+[node name="sky bg" type="ParallaxBackground" parent="BG"]
+scroll_offset = Vector2(200, 0)
+scroll_base_offset = Vector2(200, 0)
+scroll_base_scale = Vector2(200, 200)
+script = ExtResource("13_jdqk8")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG/sky bg"]
+motion_scale = Vector2(200, 200)
+motion_offset = Vector2(200, 0)
+motion_mirroring = Vector2(3840, 0)
+
+[node name="skybg" type="Sprite2D" parent="BG/sky bg/ParallaxLayer"]
+scale = Vector2(4.8, 4.8)
+texture = ExtResource("13_jcsdb")
+centered = false
+
+[node name="title5" type="TextureRect" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1252.0
+texture = ExtResource("11_xgc51")
+
+[node name="title" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("10_y7oay")
+
+[node name="title2" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("11_j7a8s")
+
+[node name="title3" type="TextureRect" parent="BG"]
+modulate = Color(1.1, 1.1, 1.1, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_vbib6")
+
+[node name="sky bg3" type="ParallaxBackground" parent="BG"]
+scroll_offset = Vector2(200, 0)
+scroll_base_offset = Vector2(200, 0)
+scroll_base_scale = Vector2(200, 200)
+script = ExtResource("18_hc0wx")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG/sky bg3"]
+motion_scale = Vector2(200, 200)
+motion_offset = Vector2(200, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="skybg" type="Sprite2D" parent="BG/sky bg3/ParallaxLayer"]
+visibility_layer = 3
+scale = Vector2(0.801629, 0.897764)
+texture = ExtResource("10_2rvaq")
+centered = false
+
+[node name="sky bg2" type="ParallaxBackground" parent="BG"]
+scroll_offset = Vector2(200, 0)
+scroll_base_offset = Vector2(200, 0)
+scroll_base_scale = Vector2(200, 200)
+script = ExtResource("16_a1cfc")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG/sky bg2"]
+motion_scale = Vector2(200, 200)
+motion_offset = Vector2(200, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="skybg" type="Sprite2D" parent="BG/sky bg2/ParallaxLayer"]
+visibility_layer = 2
+scale = Vector2(1.00031, 1.01198)
+texture = ExtResource("17_oyxuh")
+centered = false
+
+[node name="Panel" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 870.0
+offset_right = 467.0
+offset_bottom = 1014.0
+color = Color(0.27451, 0.27451, 0.27451, 1)
+
+[node name="latest_score" type="Label" parent="."]
+offset_left = 74.0
+offset_top = 936.0
+offset_right = 788.0
+offset_bottom = 1016.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_yldky")
+theme_override_font_sizes/font_size = 80
+text = "Latest Score: 0"
+label_settings = SubResource("LabelSettings_ie7in")
+vertical_alignment = 1
+script = ExtResource("10_1u4o0")
+
+[node name="highest score" type="Label" parent="."]
+offset_left = 73.0
+offset_top = 870.0
+offset_right = 787.0
+offset_bottom = 950.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_yldky")
+theme_override_font_sizes/font_size = 80
+text = "High Score: 0"
+label_settings = SubResource("LabelSettings_d1ml0")
+vertical_alignment = 1
+script = ExtResource("11_6tiv2")
+
+[node name="save" type="Button" parent="."]
+visible = false
+offset_left = 830.0
+offset_top = 862.0
+offset_right = 906.0
+offset_bottom = 966.0
+theme_override_font_sizes/font_size = 70
+text = "save"
+
+[node name="cutscene" type="Button" parent="."]
+texture_filter = 1
+offset_left = 1825.0
+offset_top = 975.0
+offset_right = 1986.0
+offset_bottom = 1155.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("22_e4r7w")
+flat = true
+
+[node name="Play" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.0980392)
+offset_left = 813.0
+offset_top = 501.0
+offset_right = 1115.0
+offset_bottom = 595.0
+theme = ExtResource("2_biuue")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+
+[node name="HowtoPlay" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.101961)
+offset_left = 724.0
+offset_top = 777.0
+offset_right = 1214.0
+offset_bottom = 861.0
+theme = ExtResource("2_biuue")
+
+[node name="Shop" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.129412)
+offset_left = 816.0
+offset_top = 638.0
+offset_right = 1115.0
+offset_bottom = 732.0
+theme = ExtResource("2_biuue")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 1331.0
+offset_top = -141.0
+offset_right = 2045.0
+offset_bottom = -80.0
+theme = ExtResource("2_biuue")
+text = "Quit"
+
+[node name="mumsic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_g7ra3")
+script = ExtResource("14_aqi6y")
+
+[connection signal="pressed" from="save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="cutscene" to="." method="_on_cutscene_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HowtoPlay" to="." method="_on_howto_play_pressed"]
+[connection signal="pressed" from="Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="finished" from="mumsic" to="mumsic" method="_on_finished"]

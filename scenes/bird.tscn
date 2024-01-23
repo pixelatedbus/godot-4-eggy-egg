@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=3 uid="uid://rbi765fsxq62"]
+
+[ext_resource type="Script" path="res://bird.gd" id="1_tmyhw"]
+[ext_resource type="Texture2D" uid="uid://c58welnnahxo7" path="res://asset/new folder2/red 1.png" id="2_sb5cs"]
+[ext_resource type="Texture2D" uid="uid://bw3tnee7nmfrh" path="res://asset/new folder2/red 2.png" id="3_lla4h"]
+[ext_resource type="Texture2D" uid="uid://dyhm31y8mamvi" path="res://asset/new folder2/red 3.png" id="4_87g6s"]
+[ext_resource type="Texture2D" uid="uid://8pp0sgl0y2dr" path="res://asset/new folder2/red 4.png" id="5_rjxtl"]
+[ext_resource type="Texture2D" uid="uid://j6abfabm7ipd" path="res://asset/new folder2/red 5.png" id="6_hloif"]
+[ext_resource type="Texture2D" uid="uid://c14v86v1ltck4" path="res://asset/new folder2/red 6.png" id="7_8a13n"]
+[ext_resource type="Texture2D" uid="uid://bg86sqk1f3be5" path="res://asset/new folder2/red 7.png" id="8_c2xfn"]
+[ext_resource type="AudioStream" uid="uid://c1kd8q23ysn0f" path="res://asset/EDITED-20240117T062029Z-001/EDITED/bird1.ogg" id="9_wl357"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alkmr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sb5cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lla4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_87g6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rjxtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hloif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8a13n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c2xfn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ap2y3"]
+radius = 11.0
+height = 52.0
+
+[node name="bird" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_tmyhw")
+
+[node name="bird pic" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-3.2, -1.2)
+scale = Vector2(0.371, 0.339)
+sprite_frames = SubResource("SpriteFrames_alkmr")
+autoplay = "default"
+frame_progress = 0.173163
+
+[node name="hurtbox" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ap2y3")
+
+[node name="noises" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_wl357")
+volume_db = -10.284
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

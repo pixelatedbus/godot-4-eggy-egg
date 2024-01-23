@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b8vsrj4l1xe4b"
+path="res://.godot/imported/hope for an egg unloopable.ogg-4554b608b09d5f5d0659de7e9e98e19f.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/EDITED-20240117T062029Z-001/EDITED/hope for an egg unloopable.ogg"
+dest_files=["res://.godot/imported/hope for an egg unloopable.ogg-4554b608b09d5f5d0659de7e9e98e19f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

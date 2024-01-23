@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6j57p7d5w26c"]
+
+[node name="timer" type="Node2D"]
+
+[node name="show" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 45, 0)
+width = 3.0
+default_color = Color(0.933333, 0.74902, 0.756863, 1)
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

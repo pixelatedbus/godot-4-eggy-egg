@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://csi5shcylpl6"]
+
+[ext_resource type="Script" path="res://scenes/real_main.gd" id="1_6mstr"]
+[ext_resource type="PackedScene" uid="uid://isn7tlrywhrg" path="res://scenes/screen/main.tscn" id="1_rmjtr"]
+[ext_resource type="AudioStream" uid="uid://qxtu05e53glp" path="res://asset/EDITED-20240108T091940Z-001/EDITED/up_and_over_loop_maybe_v2.ogg" id="2_ddehd"]
+[ext_resource type="Script" path="res://scenes/screen/bg music.gd" id="3_rlhcw"]
+[ext_resource type="PackedScene" uid="uid://dvr1xpkbipcmf" path="res://scenes/screen/pause.tscn" id="5_2bcc5"]
+
+[node name="real main" type="Node2D"]
+script = ExtResource("1_6mstr")
+
+[node name="bg music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ddehd")
+script = ExtResource("3_rlhcw")
+
+[node name="main" parent="." instance=ExtResource("1_rmjtr")]
+
+[node name="pause" parent="." instance=ExtResource("5_2bcc5")]
+visible = false
+
+[connection signal="finished" from="bg music" to="bg music" method="_on_finished"]
+[connection signal="visibility_changed" from="pause" to="pause" method="_on_visibility_changed"]

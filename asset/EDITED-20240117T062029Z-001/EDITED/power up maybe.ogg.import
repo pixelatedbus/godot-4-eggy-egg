@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jvhl2vt53it2"
+path="res://.godot/imported/power up maybe.ogg-5db400fc4ead20616cfa6dd5e601a7a8.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/EDITED-20240117T062029Z-001/EDITED/power up maybe.ogg"
+dest_files=["res://.godot/imported/power up maybe.ogg-5db400fc4ead20616cfa6dd5e601a7a8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmjgp8qdu6x25"]
+
+[ext_resource type="Script" path="res://magnet.gd" id="1_8ur88"]
+[ext_resource type="Texture2D" uid="uid://oene7aju0o12" path="res://asset/new folder2/magnet item.png" id="2_x5e4e"]
+[ext_resource type="AudioStream" uid="uid://jvhl2vt53it2" path="res://asset/EDITED-20240117T062029Z-001/EDITED/power up maybe.ogg" id="3_jwn47"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vea3j"]
+radius = 109.018
+
+[node name="magnet" type="Area2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_8ur88")
+
+[node name="magnet pic" type="Sprite2D" parent="."]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_x5e4e")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_vea3j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jwn47")
+volume_db = 1.874
+pitch_scale = 1.97
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

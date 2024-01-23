@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1pt0ggreetpk"
+path="res://.godot/imported/fail with crack.ogg-b1915d01fec543a77b86a59fa0676335.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/EDITED-20240117T062029Z-001/EDITED/fail with crack.ogg"
+dest_files=["res://.godot/imported/fail with crack.ogg-b1915d01fec543a77b86a59fa0676335.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

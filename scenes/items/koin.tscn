@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://cxt14kutm4h8t"]
+
+[ext_resource type="Script" path="res://scenes/items/koin.gd" id="1_qw88k"]
+[ext_resource type="Texture2D" uid="uid://ccd03gbd2g6vh" path="res://asset/new folder2/coin1.png" id="2_2djij"]
+[ext_resource type="AudioStream" uid="uid://cifxap8d4ml62" path="res://asset/EDITED-20240117T062029Z-001/EDITED/coin_xylophone.ogg" id="3_7isqs"]
+[ext_resource type="Texture2D" uid="uid://dqoc6er0h4han" path="res://asset/new folder2/coin2.png" id="3_fmnq0"]
+[ext_resource type="Texture2D" uid="uid://b7sjc6dmr0cn0" path="res://asset/new folder2/coin3.png" id="4_gebhg"]
+[ext_resource type="Texture2D" uid="uid://b1n2pyr5g84g5" path="res://asset/new folder2/coin4.png" id="5_14lkk"]
+[ext_resource type="Texture2D" uid="uid://d4eh27qpslph0" path="res://asset/new folder2/coin5.png" id="6_jxjx0"]
+[ext_resource type="Texture2D" uid="uid://cbl3uuisuk040" path="res://asset/new folder2/coin6.png" id="7_vrc3j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_74wuw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2djij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fmnq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gebhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_14lkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jxjx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vrc3j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_68lb4"]
+radius = 53.0
+height = 124.0
+
+[node name="koin" type="Area2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_qw88k")
+
+[node name="koin pic" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(547.5, 568.75)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_74wuw")
+autoplay = "default"
+frame_progress = 0.149489
+
+[node name="collect" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_68lb4")
+
+[node name="koin noises" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7isqs")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://darh7b80hpg7f"
+path="res://.godot/imported/Stretch (tapi sampelnya dari latex glove).ogg-55a777fdb07c11885a9bc511069ccba1.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/EDITED-20240117T062029Z-001/EDITED/Stretch (tapi sampelnya dari latex glove).ogg"
+dest_files=["res://.godot/imported/Stretch (tapi sampelnya dari latex glove).ogg-55a777fdb07c11885a9bc511069ccba1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bs4pg0wwjyg62"
+path="res://.godot/imported/Latex or Catapult Snap.ogg-fdeb0996ef4cda06fde53f15bd534f28.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/EDITED-20240117T062029Z-001/EDITED/Latex or Catapult Snap.ogg"
+dest_files=["res://.godot/imported/Latex or Catapult Snap.ogg-fdeb0996ef4cda06fde53f15bd534f28.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,176 @@
+[gd_scene load_steps=18 format=3 uid="uid://isn7tlrywhrg"]
+
+[ext_resource type="Script" path="res://scenes/screen/main.gd" id="1_3hppv"]
+[ext_resource type="PackedScene" uid="uid://mvsvbttj8571" path="res://scenes/slingshot/slingshot.tscn" id="1_a1en5"]
+[ext_resource type="PackedScene" uid="uid://bskavv4w41rw5" path="res://scenes/egg.tscn" id="2_fi1bv"]
+[ext_resource type="Script" path="res://scenes/screen/border.gd" id="3_xxmaw"]
+[ext_resource type="Script" path="res://scenes/screen/death.gd" id="5_5mu2q"]
+[ext_resource type="Texture2D" uid="uid://dahxpq4x1lj8c" path="res://asset/new folder2/bg mentah2.png" id="6_r01ak"]
+[ext_resource type="PackedScene" uid="uid://dhcgseb3r60c8" path="res://scenes/screen/scores_and_stuff.tscn" id="6_sxbvi"]
+[ext_resource type="Texture2D" uid="uid://erxjnmegv5uf" path="res://asset/new folder2/awan 1.png" id="7_kknsh"]
+[ext_resource type="PackedScene" uid="uid://caiikvg3kii7s" path="res://scenes/screen/game_over.tscn" id="7_nel3y"]
+[ext_resource type="PackedScene" uid="uid://cxt14kutm4h8t" path="res://scenes/items/koin.tscn" id="9_g5802"]
+[ext_resource type="PackedScene" uid="uid://rbi765fsxq62" path="res://scenes/bird.tscn" id="10_clc6h"]
+[ext_resource type="PackedScene" uid="uid://bmjgp8qdu6x25" path="res://scenes/items/magnet.tscn" id="11_oiobs"]
+[ext_resource type="AudioStream" uid="uid://qxtu05e53glp" path="res://asset/EDITED-20240108T091940Z-001/EDITED/up_and_over_loop_maybe_v2.ogg" id="12_tvy6j"]
+[ext_resource type="Script" path="res://scenes/screen/bg music.gd" id="13_bloj6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csx57"]
+size = Vector2(296, 2403)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ns5kq"]
+size = Vector2(295, 2438)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45yxt"]
+size = Vector2(1930, 85)
+
+[node name="main" type="Node2D"]
+modulate = Color(0.827451, 1, 1, 1)
+script = ExtResource("1_3hppv")
+
+[node name="slingshot" parent="." instance=ExtResource("1_a1en5")]
+position = Vector2(607, 839)
+
+[node name="scores and stuff" parent="." instance=ExtResource("6_sxbvi")]
+
+[node name="game over" parent="." instance=ExtResource("7_nel3y")]
+
+[node name="egg" parent="." instance=ExtResource("2_fi1bv")]
+position = Vector2(649, 607)
+
+[node name="parallax backgroun" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="parallax backgroun"]
+texture_filter = 1
+motion_scale = Vector2(6, 6)
+motion_mirroring = Vector2(0, 1077)
+
+[node name="background" type="Sprite2D" parent="parallax backgroun/ParallaxLayer"]
+texture_filter = 1
+texture = ExtResource("6_r01ak")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="parallax backgroun"]
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(0, 8000)
+
+[node name="Sprite2D2" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(672, 973)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D8" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(457, 5091)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D9" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(893, 5396)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D10" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(1385, 6510)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(1551, 2969)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D6" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(583, 3702)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D7" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(1230, 4501)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(1447, 439)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(1239, 2017)
+texture = ExtResource("7_kknsh")
+
+[node name="Sprite2D4" type="Sprite2D" parent="parallax backgroun/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(503, -477)
+texture = ExtResource("7_kknsh")
+
+[node name="koin" parent="." instance=ExtResource("9_g5802")]
+position = Vector2(-239, 599)
+
+[node name="coin making time" type="Timer" parent="."]
+autostart = true
+
+[node name="bird" parent="." instance=ExtResource("10_clc6h")]
+position = Vector2(387, -14.9999)
+
+[node name="magnet" parent="." instance=ExtResource("11_oiobs")]
+position = Vector2(161, 589)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+
+[node name="border" type="Node2D" parent="Camera2D"]
+position = Vector2(-960, -540)
+script = ExtResource("3_xxmaw")
+
+[node name="right" type="Area2D" parent="Camera2D/border"]
+
+[node name="right" type="CollisionShape2D" parent="Camera2D/border/right"]
+position = Vector2(152, 113)
+shape = SubResource("RectangleShape2D_csx57")
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D/border/right/right"]
+offset_left = -274.0
+offset_top = -902.0
+offset_right = 148.0
+offset_bottom = 1973.0
+color = Color(0, 0, 0, 1)
+
+[node name="right x pos" type="Marker2D" parent="Camera2D/border/right"]
+position = Vector2(1620, 0)
+
+[node name="left" type="Area2D" parent="Camera2D/border"]
+
+[node name="left" type="CollisionShape2D" parent="Camera2D/border/left"]
+position = Vector2(1767.5, 262)
+shape = SubResource("RectangleShape2D_ns5kq")
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/border/left/left"]
+offset_left = -147.5
+offset_top = -1046.0
+offset_right = 441.5
+offset_bottom = 1712.0
+scale = Vector2(3.81632, 1.00041)
+color = Color(0, 0, 0, 1)
+
+[node name="left x pos" type="Marker2D" parent="Camera2D/border/left"]
+position = Vector2(300, 0)
+
+[node name="death" type="Area2D" parent="Camera2D/border"]
+script = ExtResource("5_5mu2q")
+
+[node name="death zone" type="CollisionShape2D" parent="Camera2D/border/death"]
+position = Vector2(964, 1248.5)
+shape = SubResource("RectangleShape2D_45yxt")
+
+[node name="bg music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_tvy6j")
+script = ExtResource("13_bloj6")
+
+[connection signal="timeout" from="coin making time" to="." method="_on_coin_making_time_timeout"]
+[connection signal="body_entered" from="Camera2D/border/right" to="Camera2D/border" method="_on_right_body_entered"]
+[connection signal="body_entered" from="Camera2D/border/left" to="Camera2D/border" method="_on_left_body_entered"]
+[connection signal="body_entered" from="Camera2D/border/death" to="Camera2D/border/death" method="_on_body_entered"]
+[connection signal="finished" from="bg music" to="bg music" method="_on_finished"]

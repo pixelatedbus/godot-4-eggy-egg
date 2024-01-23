@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://mvsvbttj8571"]
+
+[ext_resource type="Script" path="res://scenes/slingshot/slingshot.gd" id="1_5qo1c"]
+[ext_resource type="Texture2D" uid="uid://bw3k31kpovbas" path="res://asset/ketapel.png" id="2_67md1"]
+[ext_resource type="Texture2D" uid="uid://bp1fr8n4a4ris" path="res://asset/tanah.png" id="3_3msd1"]
+[ext_resource type="Texture2D" uid="uid://b11sssa7cw11s" path="res://asset/new folder2/awan.png" id="3_dhrpt"]
+[ext_resource type="AudioStream" uid="uid://ubi2mpesifm8" path="res://asset/EDITED-20240108T091940Z-001/EDITED/Stretch (tapi samplenya bukan dari internet hehe).ogg" id="4_al40l"]
+[ext_resource type="AudioStream" uid="uid://blijmnqmsjgmh" path="res://asset/EDITED-20240108T091940Z-001/EDITED/Latex or Catapult Snap.ogg" id="5_5whl7"]
+[ext_resource type="AudioStream" uid="uid://c5nlmjk70o1wb" path="res://asset/EDITED-20240108T091940Z-001/EDITED/power up maybe.ogg" id="6_h5fcx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ofb5c"]
+radius = 88.5091
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krotn"]
+size = Vector2(137, 37)
+
+[node name="slingshot" type="Node2D"]
+script = ExtResource("1_5qo1c")
+
+[node name="SlingshotBadPiggies" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(43, 28)
+scale = Vector2(0.652558, 0.652558)
+texture = ExtResource("2_67md1")
+
+[node name="pull area" type="Area2D" parent="."]
+
+[node name="area" type="CollisionShape2D" parent="pull area"]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_ofb5c")
+
+[node name="Tanah" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7, 150)
+texture = ExtResource("3_3msd1")
+
+[node name="Tanah2" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(7, 150)
+texture = ExtResource("3_dhrpt")
+
+[node name="tanah" type="StaticBody2D" parent="."]
+
+[node name="hitbox" type="CollisionShape2D" parent="tanah"]
+position = Vector2(8.5, 136.5)
+shape = SubResource("RectangleShape2D_krotn")
+
+[node name="pull" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_al40l")
+
+[node name="release" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5whl7")
+
+[node name="landing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_h5fcx")
+
+[node name="time_limit" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="right rope" type="Line2D" parent="."]
+points = PackedVector2Array(-26, 1)
+width = 8.0
+default_color = Color(0.482353, 0.0196078, 0.0196078, 1)
+
+[node name="left rope" type="Line2D" parent="."]
+points = PackedVector2Array(12, 0)
+width = 8.0
+default_color = Color(0.796078, 0, 0, 1)
+
+[connection signal="body_entered" from="pull area" to="." method="_on_pull_area_body_entered"]
+[connection signal="timeout" from="time_limit" to="." method="_on_time_limit_timeout"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0qxwe4e364k5"
+path="res://.godot/imported/generic coin sound (kyk dari mario haha).ogg-0dd58c2f63e711fc4862fe5ac550a143.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/EDITED-20240117T062029Z-001/EDITED/generic coin sound (kyk dari mario haha).ogg"
+dest_files=["res://.godot/imported/generic coin sound (kyk dari mario haha).ogg-0dd58c2f63e711fc4862fe5ac550a143.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
